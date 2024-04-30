@@ -1,0 +1,17 @@
+.course_card img{
+    transition: all 0.2s ease;
+
+}
+#body .course_card .card {
+    overflow: hidden;
+
+}
+.course_card:hover img{
+    scale: 1.1;
+}
+
+#body .view_details_btn{
+background: #EEA127;
+font-weight: 400;
+font-size: 15px;
+}
