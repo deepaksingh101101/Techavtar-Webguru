@@ -6,14 +6,16 @@ import './assets/fontawesome.css'
 import './assets/lightbox.css'
 import './assets/owl.css'
 import './assets/templatemo-edu-meeting.css'
+import Course from "./pages/course/Course";
 
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-        </Route>
+        <Route path="/" element={<Home />}/>
+        <Route path="/course" element={<Course />}/>
+        
       </Routes>
     </BrowserRouter>
   )
