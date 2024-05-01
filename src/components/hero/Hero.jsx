@@ -2,6 +2,7 @@
 import heroVideo from '../../assets/images/course-video.mp4'
 import { ReactTyped } from "react-typed";
 import Services from '../services/Services';
+import About from '../aboutUs/About';
 
 export default function Hero() {
 
@@ -50,7 +51,7 @@ export default function Hero() {
 </section>
 {/* // <!-- ***** Main Banner Area End ***** --> */}
 
-
+<About/>
 <Services/>
 </>
   )
