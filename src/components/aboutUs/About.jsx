@@ -9,10 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 export default function About() {
   useEffect(() => {
  
-    gsap.from(".anim, .left_about span, .left_about h2, .left_about p",{
+    gsap.from(".anim",{
         opacity:0,
         stagger:0.2,
         duration:1,
+        scale:0,
         scrollTrigger:{
             trigger:".anim",
             scroller:"body",
@@ -20,10 +21,11 @@ export default function About() {
             markers:true
         }
     })
-    gsap.to(".anim,  .left_about span, .left_about h2, .left_about p",{
+    gsap.to(".anim",{
         opacity:1,
         stagger:0.2,
         duration:1,
+        scale:1,
         scrollTrigger:{
             trigger:".anim",
             scroller:"body",

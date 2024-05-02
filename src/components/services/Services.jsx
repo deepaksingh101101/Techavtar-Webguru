@@ -13,8 +13,14 @@ import python from '../../assets/images/python.webp'
 import java from '../../assets/images/java.png'
 import datascience from '../../assets/images/data science.webp'
 import './Services.css'
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import Card from '../card/Card'
 export default function Services() {
+
+  gsap.registerPlugin(ScrollTrigger);
 
   const courses=[{
     id:1,
@@ -68,6 +74,34 @@ export default function Services() {
   }
 
 ]
+
+useEffect(() => {
+ 
+  gsap.from(".course_card",{
+      opacity:0,
+      stagger:0.2,
+      duration:1,
+      scrollTrigger:{
+          trigger:".course_card",
+          scroller:"body",
+          start:"top 60%",
+          markers:true
+      }
+  })
+  gsap.to(".course_card",{
+      opacity:1,
+      stagger:0.2,
+      duration:1,
+      scrollTrigger:{
+          trigger:".course_card",
+          scroller:"body",
+          start:"top 60%",
+          markers:true
+      }
+  })
+
+
+}, []);
 
   return (
     <div className="">
