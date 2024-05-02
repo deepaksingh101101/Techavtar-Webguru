@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import  { useState } from 'react';
+import { gsap } from "gsap";
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -26,6 +26,14 @@ function Header() {
             });
         }
     };
+
+
+    var tl = gsap.timeline();
+
+
+
+
+
 
     return (
         <header className="header-area header-sticky">
